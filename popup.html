@@ -1,0 +1,70 @@
+<head>
+	<title>SQL On Salesforce</title>
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/pico.min.css">
+</head>
+<body>
+    <section class="header-grid" style="align-items: center; margin-bottom: 1rem;">
+		<header class="left">
+		  <hgroup>
+			<h1><svg fill="#000000" width="80px" height="80px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+					<path d="M16,14c6.3,0,13-1.93,13-5.5v-3C29,1.93,22.3,0,16,0S3,1.93,3,5.5v3C3,12.07,9.7,14,16,14ZM5,5.5C5,4.07,9.29,2,16,2S27,4.07,27,5.5v3C27,9.93,22.71,12,16,12S5,9.93,5,8.5Z"/>
+					<path d="M16,32c6.3,0,13-1.93,13-5.5v-3a1,1,0,0,0-2,0v3c0,1.43-4.29,3.5-11,3.5S5,27.93,5,26.5v-3a1,1,0,0,0-2,0v3C3,30.07,9.7,32,16,32Z"/>
+					<path d="M16,23c6.3,0,13-1.93,13-5.5v-3a1,1,0,0,0-2,0v3c0,1.43-4.29,3.5-11,3.5S5,18.93,5,17.5v-3a1,1,0,0,0-2,0v3C3,21.07,9.7,23,16,23Z"/>
+				</svg> SQL On Salesforce</h1>
+			<p>An extension that can run Real SQL on Salesforce Data, we get joins, subqueries, UNIONs, window functions which SOQL Lacks</p>
+		  </hgroup>
+		</header>
+		<div class="right-most">
+			<a href="https://www.buymeacoffee.com/panangipalliSaiCharan"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a book&emoji=📖&slug=panangipalliSaiCharan&button_colour=5F7FFF&font_colour=ffffff&font_family=Cookie&outline_colour=000000&coffee_colour=FFDD00" /></a>
+		</div>
+	</section>
+	<main >
+		<div class="file-grid">
+			<button class="outline" data-target="modal-org" id="orgConnectModal">Connect To Org</button>
+			<div id="details-org">
+			</div>
+		</div>
+	  <dialog id="modal-org">
+		<article class="full-width-card">
+				<header>
+					<button
+						aria-label="Close"
+						rel="prev"
+						data-target="modal-org"
+						id="closeOrgModal"
+					></button>
+					<h3>Connect To Org</h3>
+				</header>
+				<select id="selectOrg" name="select" aria-label="Select" required></select>
+				<button class="outline contrast" id="connectToOrgViaBackend">Connect To Org</button>
+				</div>
+				<h3 style="margin-top: 1rem;">How To Connect</h3> 
+				<ul>
+					<li>Login to your org and once logged in open this extension.</li>
+					<li>You can see the currently loggged in Orgs, in right side menu.</li>
+					<li>Select the org and click on connect to salesforce button.</li>
+				</ul>
+		</article>
+	  </dialog>
+      <article class="full-width-card" style="margin-top:1rem;">
+			<section id="form">
+		     <h3>SQL Grid</h3>
+			 <div id="displayOnOrgSuccess" class="editor-class">
+					<textarea placeholder="Enter query here" id="queryPlace"></textarea>
+					<button id="submitQuery" class="secondary">Submit</button>
+			 </div>
+			</section>
+	</article>
+	 <article class="full-width-card" style="margin-top:1rem;" id="error">
+		<h3>Error</h3>
+		<p id="errorPara"></p>
+	 </article>
+	</main>
+    <footer class="header-grid">
+      <medium>Built by <a href="https://panangipalli-sai-charan.onrender.com">Panangipalli Sai Charan</a> |
+        <a href="https://github.com/monkeyluffy824/sqlOnSalesforce/issues">Report issues</a>
+      </medium>
+    </footer>
+	<script src="popup.js" type="module"></script>
+</body>

@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "SQL On Salesforce",
+  "version": "1.0.2",
+  "description": "An extension that can run Real SQL on Salesforce Data, we get joins, subqueries, UNIONs, window functions which SOQL Lacks",
+  "icons": {
+    "48": "icons/sql-browser-48.png",
+    "64": "icons/sql-browser-64.png"
+  },
+  "action": {
+    "default_icon": "icons/sql-browser-48.png",
+    "default_title": "SQL On Salesforce"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["scripting","cookies","tabs"],
+  "host_permissions": ["https://*.salesforce.com/*","https://*.force.com/*"]
+}
